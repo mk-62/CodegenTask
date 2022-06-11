@@ -1,4 +1,4 @@
-#The code generator API.
+# The code generator API.
 The code generator API provides the ability to automatically output preliminary
 announcements and a list of libraries to include in C++ based on the meta
 information received. This API has a flexible extensible architecture.
