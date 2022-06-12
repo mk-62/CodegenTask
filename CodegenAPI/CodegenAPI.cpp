@@ -130,6 +130,9 @@ bool IntermediateCode::verify(
         throw bad_exception();
     }
 
+    //check namespace hierarchy
+    deepname.pop_back(); if(!deepname.empty())throw NamespaceNestingError();
+
     //check for include forced names
     for(const LongName &keyname : include_names)
         if(auto forward_it = scheme.find(keyname); forward_it==scheme.end())
